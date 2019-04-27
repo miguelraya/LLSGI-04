@@ -4,7 +4,9 @@
 A. El primer chatbot del tutorial de Steve Worswick l'he traduït i completat amb algunes millores sobre les poblacions de les Illes Balears. Consta del següents arxius:
 
 udc.aiml
+
 pueblos.set
+
 habitantes.map
 hoteles.map
 restaurantes.map

@@ -5,10 +5,9 @@ A. El primer chatbot del tutorial de Steve Worswick l'he traduït i completat am
 
 - udc.aiml
 - pueblos.set
-
-habitantes.map
-hoteles.map
-restaurantes.map
+- habitantes.map
+- hoteles.map
+- restaurantes.map
 
 A més, l'arxiu Turisme.avi té un video d'exemple d'interacció amb el chatbot.
 

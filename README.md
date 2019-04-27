@@ -9,7 +9,9 @@ A. El primer chatbot del tutorial de Steve Worswick l'he traduït i completat am
 - hoteles.map
 - restaurantes.map
 
-A més, l'arxiu Turisme.avi té un video d'exemple d'interacció amb el chatbot.
+A més, l'arxiu "Turisme.avi" té un video d'exemple d'interacció amb el chatbot.
+
+B. El segon chatbot...
 
 **Alumne:**
 >Miguel Raya Pons

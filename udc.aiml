@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Hola! Te puedo ofrecer descripciones, mapas, videos, o el pronóstico del tiempo de donde quieras, y además también información de hoteles, restaurantes y habitantes de las poblaciones de Baleares.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUE POBLACION TIENE <set>pueblos</set></pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            La población de <star/> es de <map name="habitantes"><star/></map> habitantes.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUE POBLACION HAY EN <set>pueblos</set></pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            La población de <star/> es de <map name="habitantes"><star/></map> habitantes.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME HOTELES DE <set>pueblos</set></pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes un enlace a hoteles de <formal><star/></formal>.
+            <button>
+                <text><formal><star/></formal></text>
+                <url><map name="hoteles"><star/></map></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME HOTELES EN <set>pueblos</set></pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes un enlace a hoteles de <formal><star/></formal>.
+            <button>
+                <text><formal><star/></formal></text>
+                <url><map name="hoteles"><star/></map></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME RESTAURANTES DE <set>pueblos</set></pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes un enlace a restaurantes de <formal><star/></formal>.
+            <button>
+                <text><formal><star/></formal></text>
+                <url><map name="restaurantes"><star/></map></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME RESTAURANTES EN <set>pueblos</set></pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes un enlace a restaurantes de <formal><star/></formal>.
+            <button>
+                <text><formal><star/></formal></text>
+                <url><map name="restaurantes"><star/></map></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUE POBLACION TIENE *</pattern>
+        <template>Solo tengo información de los pueblos de Baleares. Prueba con una de sus poblaciones.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUE POBLACION HAY EN *</pattern>
+        <template>Solo tengo información de los pueblos de Baleares. Prueba con una de sus poblaciones.
+        </template>
+    </category>
+    
+	<category>
+        <pattern>ENSEÑAME HOTELES DE *</pattern>
+        <template>Solo tengo enlaces para hoteles de Baleares. Prueba con una de sus poblaciones.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME HOTELES EN *</pattern>
+        <template>Solo tengo enlaces para hoteles de Baleares. Prueba con una de sus poblaciones.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME RESTAURANTES DE *</pattern>
+        <template>Solo tengo enlaces para restaurantes de Baleares. Prueba con una de sus poblaciones.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME RESTAURANTES EN *</pattern>
+        <template>Solo tengo enlaces para restaurantes de Baleares. Prueba con una de sus poblaciones.
+        </template>
+    </category>
+	
+	<category>
+        <pattern>HABLAME SOBRE *</pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes algo de información sobre <formal><star/></formal>.
+            <button>
+                <text><formal><star/></formal></text>
+                <url>https://es.wikipedia.org/wiki/<star/></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HABLAME DE *</pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes algo de información sobre <formal><star/></formal>.
+            <button>
+                <text><formal><star/></formal></text>
+                <url>https://es.wikipedia.org/wiki/<star/></url>
+            </button>
+        </template>
+    </category>
+    
+   	<category>
+        <pattern>ENSEÑAME UN MAPA DE *</pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes el mapa de <formal><star/></formal>.
+            <button>
+                <text>Mapa de <formal><star/></formal></text>
+                <url>https://www.google.es/maps?q=<star/></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>COMO ESTA EL TIEMPO EN *</pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Espero que haga un buen día en <formal><star/></formal>.
+            <button>
+                <text>Pulsa aquí para el pronostico del tiempo</text>
+                <url>https://www.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+            </button>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>ENSEÑAME UN VIDEO DE *</pattern>
+        <template>
+            <think><set name="ello"><star/></set></think>
+            Aquí tienes vídeos de <formal><star/></formal>.
+            <button>
+                <text>Vídeos de <formal><star/></formal></text>
+                <url>https://www.youtube.com/results?search_query=<star/></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HABLAME DE ELLO</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Hablame sobre <get name="ello"/></srai></li>
+                <li>Hablarte sobre que?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME UN MAPA DE ALLI</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Enseñame un mapa de <get name="ello"/></srai></li>
+                <li>Un mapa de donde?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>COMO ESTA EL TIEMPO ALLI</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Como esta el tiempo en <get name="ello"/></srai></li>
+                <li>El tiempo donde?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME UN VIDEO DE ALLI</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Enseñame un video de <get name="ello"/></srai></li>
+                <li>Un video de donde?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUE POBLACION TIENE</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Que poblacion tiene <get name="ello"/></srai></li>
+                <li>Que poblacion hay donde?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME HOTELES DE ALLI</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Enseñame hoteles de <get name="ello"/></srai></li>
+                <li>Hoteles de donde?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ENSEÑAME RESTAURANTES DE ALLI</pattern>
+        <template>
+            <condition name="ello">
+                <li value="*"><srai>Enseñame restaurantes de <get name="ello"/></srai></li>
+                <li>Restaurantes de donde?</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HABLARTE SOBRE QUE</that>
+        <template>
+            <srai>HABLAME SOBRE <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>UN MAPA DE DONDE</that>
+        <template>
+            <srai>ENSEÑAME UN MAPA DE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>EL TIEMPO AQUI</that>
+        <template>
+            <srai>COMO ESTA EL TIEMPO AQUI <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>UN VIDEO DE DONDE</that>
+        <template>
+            <srai>ENSEÑAME UN VIDEO DE <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>QUE POBLACION HAY DONDE</that>
+        <template>
+            <srai>QUE POBLACION TIENE <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>PRUEBA CON UNA DE SUS POBLACIONES</that>
+        <template>
+            <srai>QUE POBLACION TIENE <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>HOTELES DE DONDE</that>
+        <template>
+            <srai>ENSEÑAME HOTELES DE <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>RESTAURANTES DE DONDE</that>
+        <template>
+            <srai>ENSEÑAME RESTAURANTES DE <star/></srai>
+        </template>
+    </category>
+    
+</aiml>

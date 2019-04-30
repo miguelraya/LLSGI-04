@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Hola! Pregunta sobre cualquier año del siglo XXI y te contaré la noticia más relevante, a nivel nacional o internacional.
+        </template>
+    </category>
+    
+  <category>
+    <pattern><set>fechas</set></pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+        Ahora elige si a nivel nacional o internacional.
+        </template>
+  </category>
+  
+      <category>
+        <pattern>nacional</pattern>
+        <template>
+            <think><set name="nivel">nacional</set></think>
+            <condition name="fecha">
+                <li value="*"><srai>Acontecimiento nacional <get name="fecha"/></srai></li>
+                <li>Vuelve a probar</li>
+            </condition>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>internacional</pattern>
+        <template>
+            <think><set name="nivel">internacional</set></think>
+            <condition name="fecha">
+                <li value="*"><srai>Acontecimiento internacional <get name="fecha"/></srai></li>
+                <li>Vuelve a probar</li>
+            </condition>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>año siguiente</pattern>
+        <template>
+            <condition name="fecha">
+                <li value="2000"><think><set name="fecha">2001</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2001"><think><set name="fecha">2002</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2002"><think><set name="fecha">2003</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2003"><think><set name="fecha">2004</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2004"><think><set name="fecha">2005</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2005"><think><set name="fecha">2006</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2006"><think><set name="fecha">2007</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2007"><think><set name="fecha">2008</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2008"><think><set name="fecha">2009</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2009"><think><set name="fecha">2010</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2010"><think><set name="fecha">2011</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2011"><think><set name="fecha">2012</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2012"><think><set name="fecha">2013</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2013"><think><set name="fecha">2014</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2014"><think><set name="fecha">2015</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2015"><think><set name="fecha">2016</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2016"><think><set name="fecha">2017</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2017"><think><set name="fecha">2018</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2018"><think><set name="fecha">2019</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2019">No soy adivino, no se que pasará el año 2020</li>
+                <li value="*">Año siguiente a cual?</li>
+            </condition>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>año anterior</pattern>
+        <template>
+            <condition name="fecha">
+                <li value="2000">Recuerda que solo tengo información del siglo XXI</li>
+                <li value="2001"><think><set name="fecha">2000</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2002"><think><set name="fecha">2001</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2003"><think><set name="fecha">2002</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2004"><think><set name="fecha">2003</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2005"><think><set name="fecha">2004</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2006"><think><set name="fecha">2005</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2007"><think><set name="fecha">2006</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2008"><think><set name="fecha">2007</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2009"><think><set name="fecha">2008</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2010"><think><set name="fecha">2009</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2011"><think><set name="fecha">2010</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2012"><think><set name="fecha">2011</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2013"><think><set name="fecha">2012</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2014"><think><set name="fecha">2013</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2015"><think><set name="fecha">2014</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2016"><think><set name="fecha">2015</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2017"><think><set name="fecha">2016</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2018"><think><set name="fecha">2017</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="2019"><think><set name="fecha">2018</set></think><srai>Acontecimiento <get name="nivel"/> <get name="fecha"/></srai></li>
+                <li value="*">Año anterior a cual?</li>
+            </condition>
+        </template>
+    </category>
+  
+    <category>
+        <pattern>enseñame una foto</pattern>
+        <template>
+                <srai>Foto <get name="nivel"/> <get name="fecha"/></srai>
+        </template>
+    </category>
+  
+      <category>
+        <pattern>enseñame un enlace</pattern>
+        <template>
+                <srai>Enlace <get name="nivel"/> <get name="fecha"/></srai>
+        </template>
+    </category>
+  
+  <category>
+    <pattern>Acontecimiento nacional *</pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+        Año <star/>: <map name="nacional"><star/></map>
+        </template>
+  </category>
+  
+  <category>
+    <pattern>Acontecimiento internacional *</pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+        Año <star/>: <map name="internacional"><star/></map>
+        </template>
+  </category>
+  
+<category>
+    <pattern>Foto nacional *</pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+        <image><map name="nacionalfoto"><star/></map></image>
+        </template>
+  </category>
+  
+  <category>
+    <pattern>Foto internacional *</pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+        <image><map name="internacionalfoto"><star/></map></image>
+        </template>
+  </category>
+  
+ <category>
+    <pattern>enlace nacional *</pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+            <button>
+                <text><formal>Año <star/> Nacional</formal></text>
+                <url><map name="nacionallink"><star/></map></url>
+            </button>
+        </template>
+  </category>
+  
+   <category>
+    <pattern>enlace internacional *</pattern>
+        <template>
+        <think><set name="fecha"><star/></set></think>
+            <button>
+                <text><formal>Año <star/> Internacional</formal></text>
+                <url><map name="internacionallink"><star/></map></url>
+            </button>
+        </template>
+  </category>
+  
+
+</aiml>
